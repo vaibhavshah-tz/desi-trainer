@@ -1,0 +1,10 @@
+apps:
+  - name: subscribe-chat
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - subscribe:chat
+      - --tries=5
+      - --sleep=1
